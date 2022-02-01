@@ -1,14 +1,14 @@
 import './index.css'
 import { Button, Alert, Breadcrumb, Dropdown } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import app from '../../firebase/firebase'
+import app from '../../firebase.js'
 import { signInWithPopup, getAuth, GoogleAuthProvider } from 'firebase/auth'
 
 const Home = () => {
 
     const handleLogin = () => {
         const auth = getAuth();
-        
+
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider).then((result) => {
             // This gives you a Google Access Token. You can use it to access the Google API.
