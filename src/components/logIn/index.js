@@ -19,8 +19,8 @@ const LogIn = ({setUser}) => {
                 <p>Password</p>
                 <input value={password} onChange={(e)=> {setPassword(e?.target?.value)}}/>
                 <div>
-                    <Button>Login</Button>{' '}
-                    <Button onClick={() => {handleGoogleLogin()}}>Login With Google</Button>
+                    <Button variant='primary' size='lg' style={{width: 450}}>Login</Button>{' '}
+                    <Button variant='primary' size='lg' style={{width: 450}} onClick={() => {handleGoogleLogin()}}>Login With Google</Button>
                 </div>
             </div>
         </div>

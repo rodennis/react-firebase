@@ -12,8 +12,10 @@
 }
 
 .loginDiv div{
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    /* margin-bottom: 25px; */
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    height: 130px;
 }
