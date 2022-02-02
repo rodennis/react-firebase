@@ -1,9 +1,6 @@
 import './index.css'
-import { Button, Alert, Breadcrumb, Dropdown } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import app from '../../firebase/firebase.js'
-import { googleLogin } from '../../firebase/auth'
-import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 
 const Home = () => {

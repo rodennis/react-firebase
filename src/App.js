@@ -1,28 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/home'
 import LogIn from './components/logIn';
 import SignUp from './components/signUp';
 import Header from './components/header'
+import {getAuth, onAuthStateChanged} from 'firebase/auth'
 
 require('dotenv').config();
 function App() {
     const [user, setUser] = useState('');
-
+    useEffect(async () => {
+        const auth = getAuth();
+        await onAuthStateChanged(auth, (user) => setUser(user?.displayName));
+    })
 	return (
 		<BrowserRouter>
-            <Header/>
+            <Header user={user}/>
 			<Switch>
                 <Route path='/' exact={true}>
                     <Home/>
+                    <p>{user}</p>
+                    <p>555</p>
                 </Route>
                 <Route path='/login'>
 
                     <LogIn setUser={setUser}/>
                 </Route>
                 <Route path='/signup'>
-                    <SignUp/>
+                    <SignUp setUser={setUser}/>
                 </Route>
 			</Switch>
 		</BrowserRouter>
