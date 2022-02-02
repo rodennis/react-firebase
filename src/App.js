@@ -19,12 +19,9 @@ function App() {
             <Header user={user}/>
 			<Switch>
                 <Route path='/' exact={true}>
-                    <Home/>
-                    <p>{user}</p>
-                    <p>555</p>
+                    <Home user={user}/>
                 </Route>
                 <Route path='/login'>
-
                     <LogIn setUser={setUser}/>
                 </Route>
                 <Route path='/signup'>
