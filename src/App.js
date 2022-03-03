@@ -10,9 +10,12 @@ import {getAuth, onAuthStateChanged} from 'firebase/auth'
 require('dotenv').config();
 function App() {
     const [user, setUser] = useState('');
-    useEffect(async () => {
-        const auth = getAuth();
-        await onAuthStateChanged(auth, (user) => setUser(user?.displayName));
+    useEffect(() => {
+        const func = async () => {
+            const auth = getAuth();
+            await onAuthStateChanged(auth, (user) => setUser(user?.displayName));
+        }
+        func()
     })
 	return (
 		<BrowserRouter>

@@ -1,6 +1,6 @@
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import app from '../../firebase/firebase.js'
+import '../../firebase/firebase.js'
 
 const Home = ({user}) => {
 
