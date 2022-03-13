@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBtFgwoC6OKUVH0yvxmjTxjdTbdJoJe1ws",
-  authDomain: "workflowtest-f2d08.firebaseapp.com",
-  projectId: "workflowtest-f2d08",
-  storageBucket: "workflowtest-f2d08.appspot.com",
-  messagingSenderId: "196794712295",
-  appId: "1:196794712295:web:a4388cdc461f8cb6792242"
+  apiKey: "AIzaSyBShVzTWDA6Byx6n_sKgloW0pnoFnzAkLY",
+  authDomain: "coding-challenge-cefab.firebaseapp.com",
+  projectId: "coding-challenge-cefab",
+  storageBucket: "coding-challenge-cefab.appspot.com",
+  messagingSenderId: "196737113704",
+  appId: "1:196737113704:web:18871a0ecddff507e265dd"
 };
 
 // Initialize Firebase
