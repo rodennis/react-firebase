@@ -10,9 +10,10 @@ const Home = ({user}) => {
         <>
             <div className='homePage'>
                 <h1>The site is loaded. You can now edit the home page or add other components</h1>
-                {user?<h2 style={{textAlign: 'center'}}>Welcome, {user}</h2>:null}
+                
+                {user?<h2 style={{textAlign: 'center'}}>Welcome, {user}</h2>:<h2 style={{textAlign: 'center'}}>Login to upload a picture!</h2>}
             </div>
-            <UploadFile/>
+            {user? <UploadFile/> : null}
         </>
     )
 }
